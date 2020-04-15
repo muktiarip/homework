@@ -1,22 +1,169 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-10195478-12"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PeEeerr!</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
-  gtag('config', 'UA-10195478-12');
-</script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-10195478-12"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-<script data-ad-client="ca-pub-1296962981625303" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
-<title>Pekerjaan Rumah</title>
+    gtag('config', 'UA-10195478-12');
+  </script>
 </head>
 <body>
-<h1>Pekerjaan Rumah</h1>
-  <p>Lorem ipsum dolor sit amet</p>
+  <nav id="navbar" class="navbar has-shadow is-spaced">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="https://pr.netismedia.com">
+          <img src="./assets/img/pr_logo_32.png">
+        </a>
+        <div id="navbarBurger" class="navbar-burger burger"
+          data-target="navMenuDocumentation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div id="navMenuDocumentation" class="navbar-menu">
+        <div class="navbar-end">
+          <!--a class="navbar-item is-active"
+            href="documentation.html"
+          >
+            <span class="icon has-text-primary">
+              <i class="fas fa-book"></i>
+            </span>
+            <span class="is-hidden-touch is-hidden-widescreen">
+              Doc
+            </span>
+            <span class="is-hidden-desktop-only">
+              Panduan
+            </span>
+          </a>
+          <a class="navbar-item" href="faq.html">
+            <span class="icon has-text-success">
+              <i class="fas fa-play-circle"></i>
+            </span>
+            <span>FAQ</span>
+          </a-->
+          <a class="navbar-item" href="./guru/#/register">
+            <span>Daftar</span>
+          </a>
+          <a class="navbar-item" href="./guru/#/login">
+            <span>Login</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">
+        Pe<span class="has-text-danger">Eeerr</span>!
+      </h1>
+      <p class="subtitle">
+        Kumpulkan dan kelola tugas Pekerjaan Rumah melalui internet.
+        Mudah, ringkas, <span class="has-text-primary">gratis</span>!
+      </p>
+    </div>
+  </section>
+  <section class="section has-background-light">
+    <div class="container content">
+      <p>
+        <strong>Pe<span class="has-text-danger">Eeerr</span>!</strong> adalah 
+        aplikasi web untuk membantu guru, siswa, dan orang tua siswa mengelola 
+        pengumpulan tugas belajar di rumah. Alat bantu ini menjadi krusial di 
+        saat pemberlakuan <em>social distancing</em> akibat wabah COVID-19.
+      </p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container content">
+      <h4 class="title is-4">Alur Kerja</h4>
+      
+      <ul>
+        <li>Guru membuat data tugas PR.</li>
+        <li>Bagikan link dari PR tadi ke setiap siswa.</li>
+        <li>
+          Siswa membuka link yang disediakan untuk memfoto hasil pengerjaan PR
+          kemudian meng-upload foto-foto tersebut ke server.
+        </li>
+        <li>
+          Guru bisa melihat daftar tugas PR yang sudah di-upload dalam format 
+          PDF (1 file per siswa).
+        </li>
+      </ul>
+    </div>
+    <div class="content has-text-centered">
+      <a class="button is-link is-rounded" href="./guru/#/">Mulai</a>
+    </div>
+  </section>
+  <section class="section has-background-light">
+    <div class="container content">
+      <h4 class="title is-4">Hubungi Kami</h4>
+      <p>
+        Apabila anda memiliki pertanyaan atau saran untuk perbaikan aplikasi 
+        ini, hubungi kami dengan menulis pesan di bawah ini. Kami sangat 
+        menghargai segala bentuk partisipasi anda dalam pengembangan alat bantu 
+        ini.
+      </p>
+      <form name="submit-to-google-sheet">
+        <div class="field">
+          <div class="control">
+            <input name="name" type="text" placeholder="Name" required
+              class="input"
+            >
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <input name="email" type="email" placeholder="Email" required
+              class="input"
+            >
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <textarea name="message" placeholder="Tuliskan pesan anda!"
+              class="textarea"
+            ></textarea>
+          </div>
+        </div>
+        <div class="field">
+          <div class="control has-text-centered">
+            <button type="submit" class="button is-link is-rounded">Kirim</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+  
+  <footer class="footer">
+    <div class="content has-text-centered">
+      &copy; 2020 NetisMedia
+    </div>
+  </footer>
+
+  <script src="./assets/js/main.js"></script>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbz4_i6T6owjNx98c6iBdiH5jWT0Tu2KMn_hY5HRDVrucXyCLaB_/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
 </body>
 </html>
