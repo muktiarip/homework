@@ -103,17 +103,16 @@
       </ul>
     </div>
     <div class="content has-text-centered">
-      <a class="button is-link is-rounded" href="./guru/#/">Mulai</a>
+      <a class="button is-primary is-rounded" href="./guru/#/">Mulai</a>
     </div>
   </section>
   <section class="section has-background-light">
     <div class="container content">
       <h4 class="title is-4">Hubungi Kami</h4>
       <p>
-        Apabila anda memiliki pertanyaan atau saran untuk perbaikan aplikasi 
-        ini, hubungi kami dengan menulis pesan di bawah ini. Kami sangat 
-        menghargai segala bentuk partisipasi anda dalam pengembangan alat bantu 
-        ini.
+        Apabila anda memiliki pertanyaan atau saran untuk perbaikan, hubungi 
+        kami dengan menulis pesan di bawah ini. Kami sangat menghargai segala 
+        bentuk partisipasi anda dalam pengembangan alat bantu ini.
       </p>
       <form name="submit-to-google-sheet">
         <div class="field">
@@ -133,13 +132,19 @@
         <div class="field">
           <div class="control">
             <textarea name="message" placeholder="Tuliskan pesan anda!"
-              class="textarea"
+              required class="textarea"
             ></textarea>
           </div>
         </div>
         <div class="field">
           <div class="control has-text-centered">
-            <button type="submit" class="button is-link is-rounded">Kirim</button>
+            <button
+              type="submit"
+              id="btnSubmit"
+              class="button is-primary is-rounded"
+            >
+              Kirim
+            </button>
           </div>
         </div>
       </form>
@@ -155,14 +160,33 @@
   <script src="./assets/js/main.js"></script>
 
 <script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbz4_i6T6owjNx98c6iBdiH5jWT0Tu2KMn_hY5HRDVrucXyCLaB_/exec'
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyRJpV91JzOzQ303eFrET6KtHbpgTq46XCMwDhBUYf23S7dkPE/exec'
   const form = document.forms['submit-to-google-sheet']
 
   form.addEventListener('submit', e => {
     e.preventDefault()
+    let btnSubmit = document.getElementById("btnSubmit")
+    let elName = document.getElementsByName("name")[0]
+    if (elName.value === "") return
+    let elEmail = document.getElementsByName("email")[0]
+    if (elEmail.value === "") return
+    let elMessage = document.getElementsByName("message")[0]
+    if (elMessage.value === "") return
+    btnSubmit.classList.add("is-loading")
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
+      .then(response => {
+        elName.value = ""
+        elEmail.value = ""
+        elMessage.value = ""
+        alert("Pesan anda sudah kami simpan. Terimakasih.")
+      })
+      .catch(error => {
+        console.error('Error!', error.message)
+        alert("Terjadi kesalahan. " + error.message)
+      })
+      .then(() => {
+        btnSubmit.classList.remove("is-loading")
+      })
   })
 </script>
 
