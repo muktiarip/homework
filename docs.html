@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PeEeerr!</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-10195478-12"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-10195478-12');
+  </script>
+  <style type="text/css">
+    .bshadow {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+  </style>
+</head>
+<body>
+  <nav id="navbar" class="navbar has-shadow is-spaced">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+          <img src="./assets/img/pr_logo_navbar.png">
+        </a>
+        <div id="navbarBurger" class="navbar-burger burger"
+          data-target="navMenuDocumentation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div id="navMenuDocumentation" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item" href="/">
+            <span class="icon has-text-primary">
+              <i class="fas fa-home"></i>
+            </span>
+            <span>Beranda</span>
+          </a>
+          <a class="navbar-item is-active" href="docs.html">
+            <span class="icon has-text-primary">
+              <i class="fas fa-book"></i>
+            </span>
+            <span class="is-hidden-touch is-hidden-widescreen">
+              Panduan
+            </span>
+            <span class="is-hidden-desktop-only">
+              Panduan
+            </span>
+          </a>
+          <!--a class="navbar-item" href="faq.html">
+            <span class="icon has-text-success">
+              <i class="fas fa-play-circle"></i>
+            </span>
+            <span>FAQ</span>
+          </a-->
+          <a class="navbar-item" href="./guru/#/register">
+            <span class="icon has-text-primary">
+              <i class="fas fa-user-plus"></i>
+            </span>
+            <span>Daftar</span>
+          </a>
+          <a class="navbar-item" href="./guru/#/login">
+            <span class="icon has-text-primary">
+              <i class="fas fa-sign-in-alt"></i>
+            </span>
+            <span>Login</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="container content">
+      <h2 class="title is-2">Panduan</h2>
+      
+      <h3 class="title is-3">Panduan Guru</h3>
+      
+      <p>
+        Untuk bisa menggunakan aplikasi ini sebagai guru, anda perlu memiliki 
+        <em>token</em> yang bisa diperoleh pada saat melakukan registrasi <a 
+        href="./guru/#/register">di halaman web ini</a>.
+      </p>
+      
+      <p class="has-text-centered">
+        <img src="./assets/img/guru-87-register.png">
+      </p>
+      
+      <p>
+        Setelah anda berhasil mendaftar, aplikasi akan memberi informasi seperti
+        pada gambar berikut.
+      </p>
+
+      <p class="has-text-centered">
+        <img src="./assets/img/guru-88-reg-succeed.png">
+      </p>
+      
+      <p>Setelah mendapatkan token, anda perlu menjaga kerahasiaan token 
+      tersebut. Token tersebut akan anda pakai selama anda menggunakan aplikasi 
+      web ini.</p>
+      
+      <p>Tahap selanjutnya anda perlu melakukan login dengan mengisi nama anda 
+      dan token yang telah anda terima di kotak isian seperti pada gambar 
+      berikut.</p>
+      
+      <p class="has-text-centered">
+        <img src="./assets/img/guru-89-login.png">
+      </p>
+      
+      <p>Setelah login berhasil, anda akan dibawa ke halaman daftar tugas 
+      belajar.</p>
+      
+      <p class="has-text-centered">
+        <img src="./assets/img/guru-90.png" class="bshadow">
+      </p>
+      
+      <p>Karena baru pertama kali menggunakan aplikasi ini, daftar tersebut 
+      masih kosong. Untuk menambahkan data tugas belajar yang baru, klik tombol 
+      <img src="./assets/img/btn-add.png"> yang ada di pojok kanan bawah layar. 
+      Selanjutnya aplikasi akan menampilkan form isian seperti pada gambar 
+      berikut.</p>
+      
+      <p class="has-text-centered">
+        <img src="./assets/img/guru-91.png" class="bshadow">
+      </p>
+      
+      <p>Isi kolom yang bersesuaian dan akhiri dengan menekan tombol 
+      <code>Save</code>.</p>
+      
+      <p class="has-text-centered">
+        <img src="./assets/img/guru-92.png" class="bshadow">
+      </p>
+      
+      <p> Selanjutnya anda akan dibawa kembali ke halaman daftar tugas 
+      belajar.</p>
+      
+      <p class="has-text-centered">
+        <img src="./assets/img/guru-93.png" class="bshadow">
+      </p>
+      
+      <p>Fungsi beberapa tombol dalam gambar di atas adalah sebagai berikut.</p>
+      
+      <table class="table">
+        <tbody>
+          <tr>
+            <td><img src="./assets/img/btn-add.png"></td>
+            <td>tambah tugas baru.</td>
+          </tr>
+          <tr>
+            <td><img src="./assets/img/btn-delete.png"></td>
+            <td>hapus tugas.</td>
+          </tr>
+          <tr>
+            <td><img src="./assets/img/btn-edit.png"></td>
+            <td>edit tugas.</td>
+          </tr>
+          <tr>
+            <td><img src="./assets/img/btn-exit.png"></td>
+            <td>keluar dari aplikasi.</td>
+          </tr>
+        </tbody>
+      </table>
+            
+      <p>Untuk mendapatkan link upload yang akan digunakan oleh siswa, klik 
+      nama tugas belajar yang ada dalam daftar. Selanjutnya aplikasi akan 
+      menampilkan halaman seperti pada gambar berikut.</p>
+      
+      <p class="has-text-centered">
+        <img src="./assets/img/guru-95.png" class="bshadow">
+      </p>
+      
+      <p>Dengan meng-klik tombol <code>COPY LINK</code>, link upload untuk 
+      tugas ini akan disimpan di clipboard, dan bisa anda <em>paste</em> di 
+      aplikasi yang lain seperti WhatsApp, Twitter, Facebook atau email untuk 
+      anda share dengan semua siswa anda.</p>
+      
+      <p>Daftar file PDF (berisi foto yang diunggah oleh siswa) dapat anda 
+      lihat di bagian bawah halaman ini. Tekan tombol <img 
+      src="./assets/img/btn-refresh.png"> untuk memperbaharui daftar file yang 
+      telah diunggah siswa.</p>
+      
+      <p class="has-text-centered">
+        <img src="./assets/img/guru-96.png" class="bshadow">
+      </p>
+      
+      <p>Fungsi beberapa tombol dalam gambar di atas adalah sebagai berikut.</p>
+      
+      <table class="table">
+        <tbody>
+          <tr>
+            <td><img src="./assets/img/btn-refresh.png"></td>
+            <td>perbaharui daftar file yang diunggah siswa.</td>
+          </tr>
+          <tr>
+            <td><img src="./assets/img/btn-delete.png"></td>
+            <td>hapus file.</td>
+          </tr>
+          <tr>
+            <td><img src="./assets/img/btn-download.png"></td>
+            <td>download file.</td>
+          </tr>
+          <tr>
+            <td><img src="./assets/img/btn-view.png"></td>
+            <td>lihat file.</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <a name="student"></a>
+      <h3 class="title is-3">Panduan Siswa</h3>
+      
+      <p>Setelah anda mendapatkan link upload, buka link tersebut dengan 
+      menggunakan web browser. Web browser yang dianjurkan adalah sebagai 
+      berikut.</p>
+      
+      <ul>
+        <li>Google Chrome</li>
+        <li>Mozilla Firefox</li>
+        <li>Safari</li>
+        <li>Microsoft Edge</li>
+      </ul>
+      
+      <p>Pertama kali menggunakan aplikasi ini, anda akan diminta memasukkan data nama. Nomor PIN bersifat opsional (tidak harus diisi). Apabila guru memberikan nomor PIN tersebut ke anda, anda harus memasukkannya dalam tahap ini.</p>
+
+      <p class="has-text-centered">
+        <img src="./assets/img/murid-96-login.png">
+      </p>
+      
+      <p>Setelah memasukkan data identitas, aplikasi akan menampilkan halaman 
+      seperti terlihat pada gambar berikut.</p>
+
+      <p class="has-text-centered">
+        <img src="./assets/img/murid-97.png" class="bshadow">
+      </p>
+      
+      <p>Fungsi beberapa tombol dalam gambar di atas adalah sebagai berikut.</p>
+      
+      <table class="table">
+        <tbody>
+          <tr>
+            <td><img src="./assets/img/btn-description.png"></td>
+            <td>menampilkan penjelasan dari tugas yang diberikan.</td>
+          </tr>
+          <tr>
+            <td><img src="./assets/img/btn-edit.png"></td>
+            <td>perbaharui nama siswa.</td>
+          </tr>
+          <tr>
+            <td><img src="./assets/img/btn-photo.png"></td>
+            <td>ambil foto, atau ambil file foto dari album (anda bisa menandai lebih dari satu foto yang ada di album).</td>
+          </tr>
+          <tr>
+            <td><img src="./assets/img/btn-exit.png"></td>
+            <td>hapus data identitas dan keluar dari aplikasi.</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p><em>Catatan</em>: Anda bisa menekan tombol <img src="./assets/img/btn-photo.png"> beberapa kali untuk menambahkan foto atau file foto yang lainnya. Jumlah foto yang telah anda tambahkan bisa dilihat pada bagian yang tampilannya seperti ini <img src="./assets/img/info-pages.png">.</p>
+
+      <p class="has-text-centered">
+        <img src="./assets/img/murid-98.png" class="bshadow">
+      </p>
+      
+      <p>Jika semua foto sudah anda pilih, selanjutnya tekan tombol 
+      <code>KIRIM</code> untuk meng-upload foto-foto tersebut ke server. 
+      Apabila berhasil, aplikasi ini akan menampilkan halaman informasi seperti 
+      gambar di bawah ini.</p>
+
+      <p class="has-text-centered">
+        <img src="./assets/img/murid-99-succeed.png" class="bshadow">
+      </p>
+      
+      <p>Untuk memeriksa dan melihat salinan dari apa yang telah anda upload, 
+      klik tombol <code>LIHAT SALINAN</code>. Tergantung dari Sistem Operasi 
+      dari perangkat yang anda gunakan (Android, iOS, Windows, dll), mengklik 
+      tombol tersebut bisa langsung menampilkan apa yang baru saja anda upload, 
+      tapi bisa juga cuma mendownload salinan tersebut tanpa 
+      menampilkannya.</p>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      &copy; 2020 NetisMedia
+    </div>
+  </footer>
+
+  <script src="./assets/js/main.js"></script>
+
+</body>
+</html>
