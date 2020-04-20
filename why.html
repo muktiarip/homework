@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PeEeerr!</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <script src="https://unpkg.com/vue"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-10195478-12"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-10195478-12');
+  </script>
+  <style type="text/css">
+    .bshadow {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+  </style>
+</head>
+<body>
+  <nav id="navbar" class="navbar has-shadow is-spaced">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+          <img src="./assets/img/pr_logo_navbar.png">
+        </a>
+        <div id="navbarBurger" class="navbar-burger burger"
+          data-target="navMenuDocumentation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div id="navMenuDocumentation" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item" href="/">
+            <span class="icon has-text-primary">
+              <i class="fas fa-home"></i>
+            </span>
+            <span>Beranda</span>
+          </a>
+          <a class="navbar-item is-active" href="docs.html">
+            <span class="icon has-text-primary">
+              <i class="fas fa-book"></i>
+            </span>
+            <span class="is-hidden-touch is-hidden-widescreen">
+              Panduan
+            </span>
+            <span class="is-hidden-desktop-only">
+              Panduan
+            </span>
+          </a>
+          <!--a class="navbar-item" href="faq.html">
+            <span class="icon has-text-success">
+              <i class="fas fa-play-circle"></i>
+            </span>
+            <span>FAQ</span>
+          </a-->
+          <a class="navbar-item" href="./guru/#/register">
+            <span class="icon has-text-primary">
+              <i class="fas fa-user-plus"></i>
+            </span>
+            <span>Daftar</span>
+          </a>
+          <a class="navbar-item" href="./guru/#/login">
+            <span class="icon has-text-primary">
+              <i class="fas fa-sign-in-alt"></i>
+            </span>
+            <span>Login</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section id="app" class="section">
+    <div class="container content">
+      <h3 class="title is-3">Stop Pemborosan Selama Belajar Dari Rumah!</h3>
+      
+      <p>Meminta siswa untuk mengumpulkan tugas PR berupa foto/video melalui 
+      grup WhatsApp adalah hal yang kurang bijak dalam situasi prihatin 
+      sekarang ini.</p>
+      
+      <p>Untuk mengetahui jumlah pemborosan yang dilakukan dengan meminta siswa 
+      mengumpulkan tugas melalui grup WhatsApp, masukkan data yang sesuai 
+      dengan skenario yang terjadi di sekolah anda.</p>
+    </div>
+
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Jumlah siswa</label>
+      </div>
+      <div class="field-body">
+        <div class="field is-expanded">
+          <div class="field has-addons">
+            <div class="control">
+              <input class="input" type="number" v-model.number="nStudents" />
+            </div>
+          </div>
+          <p class="help">Jumlah siswa dalam satu grup WA</p>
+        </div>
+      </div>
+    </div>
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Jumlah guru</label>
+      </div>
+      <div class="field-body">
+        <div class="field is-expanded">
+          <div class="field has-addons">
+            <div class="control">
+              <input class="input" type="number" v-model.number="nTeachers" />
+            </div>
+          </div>
+          <p class="help">Jumlah guru dalam satu grup WA</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Jumlah foto/video</label>
+      </div>
+      <div class="field-body">
+        <div class="field is-expanded">
+          <div class="field has-addons">
+            <div class="control">
+              <input class="input" type="number" v-model.number="nMedia" />
+            </div>
+          </div>
+          <p class="help">Jumlah foto/video yg diposting per tugas</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Jumlah tugas</label>
+      </div>
+      <div class="field-body">
+        <div class="field is-expanded">
+          <div class="field has-addons">
+            <div class="control">
+              <input class="input" type="number" v-model.number="nAssignments" />
+            </div>
+          </div>
+          <p class="help">Jumlah tugas dalam satu bulan</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Jumlah pelajaran</label>
+      </div>
+      <div class="field-body">
+        <div class="field is-expanded">
+          <div class="field has-addons">
+            <div class="control">
+              <input class="input" type="number" v-model.number="nSubjects" />
+            </div>
+          </div>
+          <p class="help">Jumlah mata pelajaran per kelas yang menggunakan grup WA</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Jumlah kelas</label>
+      </div>
+      <div class="field-body">
+        <div class="field is-expanded">
+          <div class="field has-addons">
+            <div class="control">
+              <input class="input" type="number" v-model.number="nClasses" />
+            </div>
+          </div>
+          <p class="help">Jumlah kelas dalam satu sekolah yang menggunakan grup WA untuk tugas</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Ukuran file</label>
+      </div>
+      <div class="field-body">
+        <div class="field is-expanded">
+          <div class="field has-addons">
+            <div class="control">
+              <input class="input" type="number" v-model.number="fileSize" />
+            </div>
+          </div>
+          <p class="help">Ukuran rata-rata file foto/video (mega byte)</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Harga paket data</label>
+      </div>
+      <div class="field-body">
+        <div class="field is-expanded">
+          <div class="field has-addons">
+            <div class="control">
+              <input class="input" type="number" v-model.number="price" />
+            </div>
+          </div>
+          <p class="help">Harga paket data/internet per giga byte (Rp)</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="continer content">
+      <h5 class="is-5">Biaya Kuota Data/Internet Per Sekolah</h5>
+      <div>
+        Metode tugas lewat grup WhatsApp: 
+          <strong><span class="has-text-danger">Rp. {{ kSeparator(costDup) }}</span></strong> / bulan
+      </div>
+
+      <div>
+        Metode tugas alternatif: <strong><span class="has-text-info">Rp. {{ kSeparator(costNoDup) }}</span></strong> / bulan
+      </div>
+      <p>&nbsp;</p>
+      
+      <h5 class="is-5">Penghematan</h5>
+      <div>
+        Penghematan oleh sekolah: <strong><span class="has-text-primary">Rp. {{ kSeparator(costReduction) }}</span></strong> / bulan
+      </div>
+      <div>Tingkat penghematan biaya: <strong>{{ pctReduction }}%</strong></div>
+    </div>
+    
+    <div class="container content">
+      <h4 class="title is-4">Solusi: Metode Alternatif</h4>
+      
+      <p>Terdapat beberapa metode alternatif pengumpulan tugas belajar selama 
+      penerapan belajar dari rumah. Salah satunya adalah dengan tetap 
+      menggunakan grup WhatsApp untuk komunikasi via teks, tetapi setiap siswa 
+      mengirim foto/video hasil pengerjaan tugas mereka langsung ke nomor 
+      WhatsApp guru yang memberikan tugas, tidak melalui grup WhatsApp. Apabila 
+      guru masih merasakan kerepotan mengelola foto/video yang dikirim oleh 
+      muridnya, <a href="https://pr.netismedia.com">aplikasi web PeEeerr!</a> 
+      yang kami sediakan bisa membantu mengelola pengumpulan tugas PR tersebut 
+      sehingga lebih rapi, dan memudahkan pekerjaan memeriksa tugas.</p>
+    </div>
+  
+  </section>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      &copy; 2020 NetisMedia
+    </div>
+  </footer>
+
+  <script src="./assets/js/main.js"></script>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        nStudents: 30,
+        nTeachers: 1,
+        nMedia: 5,
+        nAssignments: 10,
+        nSubjects: 1,
+        nClasses: 1,
+        fileSize: 1,
+        price: 16000,
+      },
+      computed: {
+        costDup() {
+          return Math.round(((this.nStudents + this.nTeachers)**2) * this.nMedia * this.nAssignments * this.nSubjects * this.nClasses * this.fileSize * this.price / 1024)
+        },
+        costNoDup() {
+          return Math.round(this.nStudents * (1 + this.nTeachers) * this.nMedia * this.nAssignments * this.nSubjects * this.nClasses * this.fileSize * this.price / 1024)
+        },
+        costReduction() {
+          return this.costDup - this.costNoDup
+        },
+        pctReduction() {
+          return Math.round(100 * (this.costReduction / this.costDup))
+        }
+      },
+      methods: {
+        kSeparator(value) {
+          value += '';
+          let x = value.split('.');
+          let x1 = x[0];
+          let x2 = x.length > 1 ? ',' + x[1] : '';
+          let rgx = /(\d+)(\d{3})/;
+          while (rgx.test(x1)){
+              x1 = x1.replace(rgx, '$1' + '.' + '$2');
+          }
+          return x1 + x2;
+        }
+      },
+    })
+  </script>
+
+</body>
+</html>
